@@ -58,16 +58,3 @@ def Stop():
     GPIO.output(IN1,LOW)
     pwm2.ChangeDutyCycle(0)
     pwm1.ChangeDutyCycle(0)
-
-if __name__ == '__main__':
-    try:
-        while True:
-            Forward(100)
- 
- 
-    except KeyboardInterrupt:
-        print("Measurement stopped by User")
-        pwm1.stop()
-        pwm2.stop()
-        GPIO.cleanup()
-        sys.exit()

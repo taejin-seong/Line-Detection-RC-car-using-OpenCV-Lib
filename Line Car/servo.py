@@ -23,12 +23,3 @@ def Turnleft():
 def HardTurnleft():
     return p.ChangeDutyCycle(12.5)
 
-if __name__ == '__main__':
-    try:
-        while True:
-            p.ChangeDutyCycle(12.5)
-            time.sleep(10)
-            
-    except KeybordInterrupt:
-         p.stop()
-         GPIO.cleanup()
